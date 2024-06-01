@@ -133,7 +133,7 @@ int open_output_device(AVFormatContext **output_fmt_ctx2,
     // const char *output_fmt_name = "mp4";
     // const char *output_file = "d:/1.mp4";
     // const char *output_fmt_name = "flv";
-    // const char *output_file = "rtmp://139.9.186.204:31935/live/557254322";
+    // const char *output_file = "rtmp://srs-push.qq829.cn:31935/live/557254322";
     // const char *output_file = "d:/1.flv";
     const char *output_fmt_name = av_dict_get(out_options, "output_fmt_name", NULL, 0)->value;
 
@@ -368,7 +368,7 @@ int transcode(AVFormatContext *input_fmt_ctx,
         }
         // 释放编码数据包
         av_packet_unref(&enc_packet);
-        // 释放解码数据包
+        // 释放编码数据包
         av_packet_unref(&packet);
     }
     // 写入文件尾
@@ -426,7 +426,7 @@ __declspec(dllexport) int __cdecl main2(int argc, char const *argv[])
     }
 
     // 开始转码
-    av_dict_set(&out_options, "output_file", "rtmp://139.9.186.204:31935/live/557254322", 0);
+    av_dict_set(&out_options, "output_file", "rtmp://srs-push.qq829.cn:31935/live/557254322", 0);
     ret = transcode(input_fmt_ctx, in_stream, in_codec_ctx, output_fmt_ctx, out_stream, out_codec_ctx, out_options);
     if (ret < 0)
     {
@@ -451,5 +451,5 @@ exit:
 }
 
 __declspec(dllexport) int __cdecl ffmain(int argc, char const *argv[]){
-    return main(argc,argv);
+    return  main(argc,argv);
 }
