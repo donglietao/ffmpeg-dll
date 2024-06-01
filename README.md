@@ -1,5 +1,13 @@
 #### 将ffmpeg 编译为dll供外部调用
 
+使用命令行工具时，在任务管理口可以看到ffmpeg的进程和参数，不太友好。因此将ffmpeg命令行编译为dll供外部使用。虽然重新用c/c++实现转码并不难，但是命令行工具已经能解决大多数的问题。重新实现耗时耗力，还不一定比命令行实现的更好。
+
+
+
+基于ffmpeg7.0构建：https://github.com/GyanD/codexffmpeg/releases 
+
+
+
 #### 创建qt应用程序，设置项目为lib
 
 ```
