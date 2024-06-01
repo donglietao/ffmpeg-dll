@@ -4,7 +4,7 @@
 
 
 
-基于ffmpeg7.0构建：https://github.com/GyanD/codexffmpeg/releases 
+基于ffmpeg7.0构建：https://github.com/GyanD/codexffmpeg/releases/tag/7.0.1 
 
 
 
