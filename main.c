@@ -291,7 +291,7 @@ int transcode(AVFormatContext *input_fmt_ctx,
     struct SwsContext *sws_ctx = sws_getContext(in_stream->codecpar->width, in_stream->codecpar->height, in_stream->codecpar->format,
                                                 out_stream->codecpar->width, out_stream->codecpar->height, out_stream->codecpar->format,
                                                 SWS_BILINEAR, NULL, NULL, NULL);
-    printf("----------------------------------transcoding-------------------------------------------\n");
+    printf("----------------------------------transcod-------------------------------------------\n");
     // 初始化一个变量来保存当前的 PTS
     int64_t frame_count = 0;
     int64_t start_pts = in_stream->start_time;
@@ -450,6 +450,7 @@ exit:
     return 0;
 }
 
-__declspec(dllexport) int __cdecl ffmain(int argc, char const *argv[]){
-    return  main(argc,argv);
+__declspec(dllexport) int __cdecl ffmain(int argc, char const *argv[])
+{
+    return main(argc, argv);
 }
